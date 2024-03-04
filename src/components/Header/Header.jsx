@@ -12,6 +12,7 @@ import { IoIosClose } from "react-icons/io";
 import { IoMdLogIn } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
 
 export default function Header() {
   return (
@@ -25,8 +26,8 @@ export default function Header() {
               </div>
               <h1 className="text-2xl text-white">OpenSea</h1>
             </div>
-            <div className="mx-6 h-8 w-0.5 bg-gray-300 rounded-lg"></div>
-            <nav>
+            <div className="hidden sm:block mx-6 h-8 w-0.5 bg-gray-300 rounded-lg"></div>
+            <nav className="hidden sm:block ">
               <ul className="child:text-white flex items-center gap-8">
                 <li>
                   <Link to={"/"}>Drops</Link>
@@ -41,7 +42,7 @@ export default function Header() {
             </nav>
           </div>
           <div>
-            <div className="flex bg-white/10 px-2 py-3 rounded-lg">
+            <div className="hidden xl:flex bg-white/10 px-2 py-3 rounded-lg">
               <IoMdSearch color="#FFF" size="1.5em" />
               <input
                 type="text"
@@ -51,17 +52,25 @@ export default function Header() {
               <IoIosClose color="#FFF" size="1.5em" />
             </div>
           </div>
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-4 sm:gap-2.5">
+            <div className="xl:hidden block">
+              <Link
+                to="/"
+                className="flex gap-2 text-white bg-white/10 p-2 rounded-lg"
+              >
+                <IoMdSearch color="#fff" size="1.5em" className="p-0.5" />
+              </Link>
+            </div>
             <div>
               <Link
                 to="/"
                 className="flex gap-2 text-white bg-white/10 p-2 rounded-lg"
               >
                 <IoMdLogIn color="#fff" size="1.5em" />
-                <span>Login</span>
+                <span className="xl:inline inline sm:hidden">Login</span>
               </Link>
             </div>
-            <div>
+            <div className="hidden sm:block">
               <Link
                 to="/"
                 className="flex gap-2 text-white bg-white/10 p-2 rounded-lg"
@@ -69,12 +78,20 @@ export default function Header() {
                 <FaUser color="#fff" size="1.5em" className="p-1" />
               </Link>
             </div>
-            <div>
+            <div className="hidden sm:block">
               <Link
                 to="/"
                 className="flex gap-2 text-white bg-white/10 p-2 rounded-lg"
               >
                 <IoMdCart color="#fff" size="1.5em" className="p-0.5" />
+              </Link>
+            </div>
+            <div className="block sm:hidden">
+              <Link
+                to="/"
+                className="flex gap-2 text-white bg-white/10 p-2 rounded-lg"
+              >
+                <IoMenu color="#fff" size="1.5em" />
               </Link>
             </div>
           </div>
