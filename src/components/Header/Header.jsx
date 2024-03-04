@@ -28,7 +28,7 @@ export default function Header() {
             </div>
             <div className="hidden sm:block mx-6 h-8 w-0.5 bg-gray-300 rounded-lg"></div>
             <nav className="hidden sm:block ">
-              <ul className="child:text-white flex items-center gap-8">
+              <ul className="child:text-white flex items-center gap-5 md:gap-8">
                 <li>
                   <Link to={"/"}>Drops</Link>
                 </li>
