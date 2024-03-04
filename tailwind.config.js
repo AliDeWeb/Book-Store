@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/*.{js,jsx}"],
+  content: ["./src/*.{js,jsx}", "./src/components/*/*.{js,jsx}"],
   theme: {
+    container: {
+      center: true,
+    },
     fontFamily: {
       "Inter-Regular": "Inter-Regular",
       "Inter-Bold": "Inter-Bold",
@@ -13,5 +16,10 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };
