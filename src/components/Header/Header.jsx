@@ -1,22 +1,41 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 
-//? packages
+//? Packages
 import { Link } from "react-router-dom";
 
-//? images
+//? Images
 import siteIcon from "../../assets/icons/site-icon.svg";
 
-//? icons
+//? Icons
 import { IoMdSearch } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { IoMdLogIn } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { MdBarChart } from "react-icons/md";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { MdOutlineModeEdit } from "react-icons/md";
+import { GiSpeedBoat } from "react-icons/gi";
+import { FaAngleRight } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaRedditAlien } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 export default function Header() {
+  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+
+  //? Funcs
+  const hamburgerMenuToggler = useCallback(() => {
+    setShowHamburgerMenu((prev) => !prev);
+  }, []);
+
   return (
-    <header className="bg-main-color/50 py-2.5">
+    <header className="bg-main-color/50 py-2.5 relative">
       <div className="container">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -91,12 +110,123 @@ export default function Header() {
                 to="/"
                 className="flex gap-2 text-white bg-white/10 p-2 rounded-lg"
               >
-                <IoMenu color="#fff" size="1.5em" />
+                <button onClick={hamburgerMenuToggler}>
+                  {!showHamburgerMenu ? (
+                    <IoMenu color="#fff" size="1.5em" />
+                  ) : (
+                    <IoIosClose color="#fff" size="1.5em" />
+                  )}
+                </button>
               </Link>
             </div>
           </div>
         </div>
       </div>
+      {showHamburgerMenu && (
+        <div className="bg-[#252525] w-screen h-[calc(100dvh-60px)] absolute top-[60px] right-0 left-0 bottom-0">
+          <div className="container">
+            <div className="relative h-[calc(100dvh-80px)]">
+              <ul className="child:text-white flex flex-col gap-10 mt-5">
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <FaRegCalendarAlt color="#fff" size="1.5em" />
+                      Drops
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <MdBarChart color="#fff" size="1.5em" />
+                      States
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <IoNewspaperOutline color="#fff" size="1.5em" />
+                      Resources
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <MdOutlineModeEdit color="#fff" size="1.5em" />
+                      Create
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <GiSpeedBoat color="#fff" size="1.5em" />
+                      OpenSea Pro
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+              </ul>
+              <div className="absolute right-0 left-0 bottom-8">
+                <hr />
+                <div className="flex items-center justify-center gap-3 mt-4">
+                  <div>
+                    <Link to="/">
+                      <FaTwitter size="1.5em" color="#FFF" />
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/">
+                      <FaInstagram size="1.5em" color="#FFF" />
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/">
+                      <FaDiscord size="1.5em" color="#FFF" />
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/">
+                      <FaRedditAlien size="1.5em" color="#FFF" />
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/">
+                      <FaYoutube size="1.5em" color="#FFF" />
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/">
+                      <FaTiktok size="1.5em" color="#FFF" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

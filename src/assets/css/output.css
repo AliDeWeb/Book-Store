@@ -588,6 +588,62 @@ video {
   font-family: "Inter-Bold";
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-\[60px\] {
+  top: 60px;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
+.bottom-32 {
+  bottom: 8rem;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.bottom-16 {
+  bottom: 4rem;
+}
+
+.bottom-8 {
+  bottom: 2rem;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -596,6 +652,30 @@ video {
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
@@ -628,6 +708,18 @@ video {
   height: 2rem;
 }
 
+.h-\[calc\(100dvh-60px\)\] {
+  height: calc(100dvh - 60px);
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-\[calc\(100dvh-80px\)\] {
+  height: calc(100dvh - 80px);
+}
+
 .w-0 {
   width: 0px;
 }
@@ -640,8 +732,20 @@ video {
   width: 450px;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -660,12 +764,20 @@ video {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .rounded-lg {
@@ -681,6 +793,11 @@ video {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.bg-main-color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+}
+
 .bg-main-color\/50 {
   background-color: rgb(18 18 18 / 0.5);
 }
@@ -691,6 +808,19 @@ video {
 
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#\] {
+  background-color: #;
+}
+
+.bg-\[\#252525\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 37 37 / var(--tw-bg-opacity));
 }
 
 .p-0 {
