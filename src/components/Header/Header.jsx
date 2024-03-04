@@ -43,7 +43,7 @@ export default function Header() {
               <div className="size-10">
                 <img src={siteIcon} alt="img" className="size-full" />
               </div>
-              <h1 className="text-2xl text-white">OpenSea</h1>
+              <h1 className="text-lg sm:text-2xl text-white">OpenSea</h1>
             </div>
             <div className="hidden sm:block mx-6 h-8 w-0.5 bg-gray-300 rounded-lg"></div>
             <nav className="hidden sm:block ">
@@ -71,7 +71,7 @@ export default function Header() {
               <IoIosClose color="#FFF" size="1.5em" />
             </div>
           </div>
-          <div className="flex items-center gap-4 sm:gap-2.5">
+          <div className="flex items-center gap-4 sm:gap-1.5">
             <div className="xl:hidden block">
               <Link
                 to="/"
@@ -86,7 +86,7 @@ export default function Header() {
                 className="flex gap-2 text-white bg-white/10 p-2 rounded-lg"
               >
                 <IoMdLogIn color="#fff" size="1.5em" />
-                <span className="xl:inline inline sm:hidden">Login</span>
+                <span className="xl:inline  hidden">Login</span>
               </Link>
             </div>
             <div className="hidden sm:block">
