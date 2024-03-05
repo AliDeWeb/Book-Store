@@ -42,6 +42,7 @@ export default function Header() {
   const searchBarValueHandler = useCallback((event) => {
     setSearchBarValue(event.target.value);
   }, []);
+  const clearSearchBarValue = useCallback(() => setSearchBarValue(""), []);
 
   return (
     <header className="bg-main-color/50 py-2.5 relative">
@@ -83,7 +84,9 @@ export default function Header() {
                 value={searchBarValue}
                 onChange={searchBarValueHandler}
               />
-              <IoIosClose color="#FFF" size="1.5em" />
+              <button onClick={clearSearchBarValue}>
+                <IoIosClose color="#FFF" size="1.5em" />
+              </button>
             </div>
           </div>
           <div className="flex items-center gap-4 sm:gap-1.5">
