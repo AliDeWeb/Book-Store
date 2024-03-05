@@ -11,11 +11,17 @@
   font-family: "Inter-Bold";
   src: url("../fonts/Inter-Bold.ttf");
   font-display: swap;
-  font-weight: 700  ;
+  font-weight: 700;
 }
 @font-face {
   font-family: "Inter-SemiBold";
   src: url("../fonts/Inter-SemiBold.ttf");
   font-display: swap;
   font-weight: 600;
+}
+
+/* Custom Styles */
+.active-category {
+  background-color: #ffffff1f !important;
+  transition: all ease-in 150ms;
 }
