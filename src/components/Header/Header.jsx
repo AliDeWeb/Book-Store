@@ -29,6 +29,7 @@ import { FaTiktok } from "react-icons/fa";
 export default function Header() {
   //? States
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+  const [showSearchBar, setShowSearchBar] = useState(true);
   const [searchBarValue, setSearchBarValue] = useState("");
 
   //? Funcs
@@ -42,7 +43,11 @@ export default function Header() {
   return (
     <header className="bg-main-color/50 py-2.5 relative">
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div
+          className={`flex items-center justify-between ${
+            showSearchBar && "hidden"
+          }`}
+        >
           <div className="flex items-center">
             <div className="flex items-center gap-2.5">
               <div className="size-10">
@@ -290,6 +295,25 @@ export default function Header() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {showSearchBar && (
+        <div className="w-full h-[80px] bg-black fixed top-0 left-0 right-0">
+          <div className="container h-full">
+            <div className="flex items-center justify-between h-full px-2">
+              <div className="flex items-center h-full gap-2">
+                <IoMdSearch color="#FFF" size="1.5em" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="bg-transparent mx-2 outline-none border-none text-white w-[200px] focus:border"
+                  value={searchBarValue}
+                  onChange={searchBarValueHandler}
+                />
+              </div>
+              <IoIosClose color="#FFF" size="1.5em" />
             </div>
           </div>
         </div>
