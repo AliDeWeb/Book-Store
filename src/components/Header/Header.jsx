@@ -27,11 +27,16 @@ import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 
 export default function Header() {
+  //? States
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+  const [searchBarValue, setSearchBarValue] = useState("");
 
   //? Funcs
   const hamburgerMenuToggler = useCallback(() => {
     setShowHamburgerMenu((prev) => !prev);
+  }, []);
+  const searchBarValueHandler = useCallback((event) => {
+    setSearchBarValue(event.target.value);
   }, []);
 
   return (
@@ -67,6 +72,8 @@ export default function Header() {
                 type="text"
                 placeholder="Search"
                 className="bg-transparent mx-2 outline-none border-none text-white w-[450px] focus:border"
+                value={searchBarValue}
+                onChange={searchBarValueHandler}
               />
               <IoIosClose color="#FFF" size="1.5em" />
             </div>
@@ -126,7 +133,7 @@ export default function Header() {
         <div className="bg-[#252525] w-screen h-[calc(100dvh-60px)] absolute top-[60px] right-0 left-0 bottom-0">
           <div className="container">
             <div className="relative h-[calc(100dvh-80px)]">
-              <ul className="child:text-white flex flex-col gap-10 mt-5">
+              <ul className="child:text-white flex flex-col gap-10 mt-5 max-h-[400px] overflow-auto">
                 <li>
                   <Link
                     to="/"
@@ -171,6 +178,66 @@ export default function Header() {
                     <div className="flex items-center justify-between gap-3">
                       <MdOutlineModeEdit color="#fff" size="1.5em" />
                       Create
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <GiSpeedBoat color="#fff" size="1.5em" />
+                      OpenSea Pro
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <GiSpeedBoat color="#fff" size="1.5em" />
+                      OpenSea Pro
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <GiSpeedBoat color="#fff" size="1.5em" />
+                      OpenSea Pro
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <GiSpeedBoat color="#fff" size="1.5em" />
+                      OpenSea Pro
+                    </div>
+                    <FaAngleRight />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <GiSpeedBoat color="#fff" size="1.5em" />
+                      OpenSea Pro
                     </div>
                     <FaAngleRight />
                   </Link>
