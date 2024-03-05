@@ -57,7 +57,9 @@ export default function Header() {
               <div className="size-10">
                 <img src={siteIcon} alt="img" className="size-full" />
               </div>
-              <h1 className="text-lg sm:text-2xl text-white">OpenSea</h1>
+              <h1 className="text-lg sm:text-2xl text-white">
+                <Link to="/">BookSea</Link>
+              </h1>
             </div>
             <div className="hidden sm:block mx-6 h-8 w-0.5 bg-gray-300 rounded-lg"></div>
             <nav className="hidden sm:block ">
