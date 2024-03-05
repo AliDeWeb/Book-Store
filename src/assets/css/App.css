@@ -20,6 +20,11 @@
   font-weight: 600;
 }
 
+/* Defaults */
+:root {
+  user-select: none;
+}
+
 /* Custom Styles */
 .active-category {
   background-color: #ffffff1f !important;
