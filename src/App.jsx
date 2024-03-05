@@ -1,9 +1,9 @@
 import "./assets/css/App.css";
 
-import Header from "./components/Header/Header";
+import Router from "./settings/Routing/Routes";
 
 function App() {
-  return <Header />;
+  return <>{<Router />}</>;
 }
 
 export default App;
