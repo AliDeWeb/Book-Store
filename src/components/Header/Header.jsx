@@ -29,12 +29,15 @@ import { FaTiktok } from "react-icons/fa";
 export default function Header() {
   //? States
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
-  const [showSearchBar, setShowSearchBar] = useState(true);
+  const [showSearchBar, setShowSearchBar] = useState(false);
   const [searchBarValue, setSearchBarValue] = useState("");
 
   //? Funcs
   const hamburgerMenuToggler = useCallback(() => {
     setShowHamburgerMenu((prev) => !prev);
+  }, []);
+  const searchBarToggler = useCallback(() => {
+    setShowSearchBar((prev) => !prev);
   }, []);
   const searchBarValueHandler = useCallback((event) => {
     setSearchBarValue(event.target.value);
@@ -85,12 +88,12 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-4 sm:gap-1.5">
             <div className="xl:hidden block">
-              <Link
-                to="/"
+              <button
+                onClick={searchBarToggler}
                 className="flex gap-2 text-white bg-white/10 p-2 rounded-lg"
               >
                 <IoMdSearch color="#fff" size="1.5em" className="p-0.5" />
-              </Link>
+              </button>
             </div>
             <div>
               <Link
@@ -300,7 +303,7 @@ export default function Header() {
         </div>
       )}
       {showSearchBar && (
-        <div className="w-full h-[80px] bg-black fixed top-0 left-0 right-0">
+        <div className="w-full h-[60px] bg-black fixed top-0 left-0 right-0">
           <div className="container h-full">
             <div className="flex items-center justify-between h-full px-2">
               <div className="flex items-center h-full gap-2">
@@ -313,7 +316,9 @@ export default function Header() {
                   onChange={searchBarValueHandler}
                 />
               </div>
-              <IoIosClose color="#FFF" size="1.5em" />
+              <button onClick={searchBarToggler}>
+                <IoIosClose color="#FFF" size="1.5em" />
+              </button>
             </div>
           </div>
         </div>
