@@ -10,7 +10,7 @@ import "swiper/css";
 //? Imaged
 import productImg from "../../assets/imgs/products-img/the-lord-of-the-rings.jpg";
 
-export default function TrendBooksSlider() {
+export default function TrendBooksSlider({ trends }) {
   return (
     <div className="py-6">
       <div className="container">
@@ -40,121 +40,36 @@ export default function TrendBooksSlider() {
             },
           }}
         >
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] px-4 py-3 rounded-lg w-[280px] md:w-[332px] h-[402px] md:h-[456px] m-auto text-white">
-              <div className="size-[250px] md:size-[300px] rounded-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={productImg} alt="img" className="size-full" />
-                </Link>
+          {trends.map((el) => (
+            <SwiperSlide key={el.id}>
+              <div className="flex flex-col bg-[#2a2a2a] px-4 py-3 rounded-lg w-[280px] md:w-[332px] h-[402px] md:h-[456px] m-auto text-white">
+                <div className="size-[250px] md:size-[300px] rounded-lg overflow-hidden">
+                  <Link className="size-full">
+                    <img
+                      src={productImg}
+                      alt="img"
+                      loading="lazy"
+                      className="size-full"
+                    />
+                  </Link>
+                </div>
+                <h3 className="mt-3 uppercase md:text-xl line-clamp-1">
+                  <Link>{el.title}</Link>
+                </h3>
+                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
+                  <span className="text-sm">${el.price}</span>
+                  <span className="text-sm hover:text-white transition-all capitalize line-clamp-1">
+                    <Link>{el.author}</Link>
+                  </span>
+                </div>
+                <div className="mt-4">
+                  <button className="text-white rounded-lg py-2 px-8 bg-[#1b1b1b] hover:bg-[#0f0f0f] transition-all">
+                    Add
+                  </button>
+                </div>
               </div>
-              <h3 className="mt-3 uppercase md:text-xl line-clamp-1">
-                <Link>the lord of the rings</Link>
-              </h3>
-              <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                <span className="text-sm">$12</span>
-                <span className="text-sm hover:text-white transition-all">
-                  <Link>John State</Link>
-                </span>
-              </div>
-              <div className="mt-4">
-                <button className="text-white rounded-lg py-2 px-8 bg-[#1b1b1b] hover:bg-[#0f0f0f] transition-all">
-                  Add
-                </button>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] px-4 py-3 rounded-lg w-[280px] md:w-[332px] h-[402px] md:h-[456px] m-auto text-white">
-              <div className="size-[250px] md:size-[300px] rounded-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={productImg} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <h3 className="mt-3 uppercase md:text-xl line-clamp-1">
-                <Link>the lord of the rings</Link>
-              </h3>
-              <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                <span className="text-sm">$12</span>
-                <span className="text-sm hover:text-white transition-all">
-                  <Link>John State</Link>
-                </span>
-              </div>
-              <div className="mt-4">
-                <button className="text-white rounded-lg py-2 px-8 bg-[#1b1b1b] hover:bg-[#0f0f0f] transition-all">
-                  Add
-                </button>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] px-4 py-3 rounded-lg w-[280px] md:w-[332px] h-[402px] md:h-[456px] m-auto text-white">
-              <div className="size-[250px] md:size-[300px] rounded-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={productImg} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <h3 className="mt-3 uppercase md:text-xl line-clamp-1">
-                <Link>the lord of the rings</Link>
-              </h3>
-              <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                <span className="text-sm">$12</span>
-                <span className="text-sm hover:text-white transition-all">
-                  <Link>John State</Link>
-                </span>
-              </div>
-              <div className="mt-4">
-                <button className="text-white rounded-lg py-2 px-8 bg-[#1b1b1b] hover:bg-[#0f0f0f] transition-all">
-                  Add
-                </button>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] px-4 py-3 rounded-lg w-[280px] md:w-[332px] h-[402px] md:h-[456px] m-auto text-white">
-              <div className="size-[250px] md:size-[300px] rounded-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={productImg} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <h3 className="mt-3 uppercase md:text-xl line-clamp-1">
-                <Link>the lord of the rings</Link>
-              </h3>
-              <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                <span className="text-sm">$12</span>
-                <span className="text-sm hover:text-white transition-all">
-                  <Link>John State</Link>
-                </span>
-              </div>
-              <div className="mt-4">
-                <button className="text-white rounded-lg py-2 px-8 bg-[#1b1b1b] hover:bg-[#0f0f0f] transition-all">
-                  Add
-                </button>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] px-4 py-3 rounded-lg w-[280px] md:w-[332px] h-[402px] md:h-[456px] m-auto text-white">
-              <div className="size-[250px] md:size-[300px] rounded-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={productImg} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <h3 className="mt-3 uppercase md:text-xl line-clamp-1">
-                <Link>the lord of the rings</Link>
-              </h3>
-              <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                <span className="text-sm">$12</span>
-                <span className="text-sm hover:text-white transition-all">
-                  <Link>John State</Link>
-                </span>
-              </div>
-              <div className="mt-4">
-                <button className="text-white rounded-lg py-2 px-8 bg-[#1b1b1b] hover:bg-[#0f0f0f] transition-all">
-                  Add
-                </button>
-              </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

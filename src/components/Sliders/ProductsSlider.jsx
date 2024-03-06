@@ -14,12 +14,12 @@ import img3 from "../../assets/imgs/products-img/03.jpg";
 import img4 from "../../assets/imgs/products-img/04.jpg";
 import img5 from "../../assets/imgs/products-img/05.jpg";
 
-export default function ProductsSlider() {
+export default function ProductsSlider(props) {
   return (
     <div className="py-6">
       <div className="container">
-        <h2 className="text-white font-Inter-Bold text-2xl mb-8">
-          Audio Books
+        <h2 className="text-white font-Inter-Bold text-2xl mb-8 capitalize">
+          {props.sectionTitle}
         </h2>
         <Swiper
           spaceBetween={5}
@@ -51,266 +51,33 @@ export default function ProductsSlider() {
             },
           }}
         >
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img1} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
+          {props.productsArr.map((el) => (
+            <SwiperSlide key={Math.random()}>
+              <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
+                <div className="size-full rounded-t-lg overflow-hidden">
+                  <Link className="size-full">
+                    <img
+                      src={img5}
+                      loading="lazy"
+                      alt="img"
+                      className="size-full"
+                    />
+                  </Link>
+                </div>
+                <div className="px-4 py-3">
+                  <h3 className="mt-3 uppercase line-clamp-1">
+                    <Link>{el.title}</Link>
+                  </h3>
+                  <div className="flex items-center gap-3 mt-4 child:text-gray-400">
+                    <span className="text-sm">${el.price}</span>
+                    <span className="text-sm hover:text-white transition-all line-clamp-1">
+                      <Link>{el.author}</Link>
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img2} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img3} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img4} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex flex-col bg-[#2a2a2a] rounded-lg m-auto text-white w-[200px] h-[296px]">
-              <div className="size-full rounded-t-lg overflow-hidden">
-                <Link className="size-full">
-                  <img src={img5} alt="img" className="size-full" />
-                </Link>
-              </div>
-              <div className="px-4 py-3">
-                <h3 className="mt-3 uppercase line-clamp-1">
-                  <Link>the lord of the rings</Link>
-                </h3>
-                <div className="flex items-center gap-3 mt-4 child:text-gray-400">
-                  <span className="text-sm">$12</span>
-                  <span className="text-sm hover:text-white transition-all">
-                    <Link>John State</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
