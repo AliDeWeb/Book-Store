@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 //? Elements
-import Main from "../../pages/main/main";
+import Main from "../../pages/main/Main";
 
 export default function Router() {
   return (

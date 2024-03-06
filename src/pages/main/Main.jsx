@@ -3,6 +3,7 @@ import React, { useState, useId } from "react";
 //? Components
 import Header from "../../components/Header/Header";
 import ElementsSlider from "../../components/Sliders/ElementsSlider";
+import TrendBooksSlider from "../../components/Sliders/TrendBooksSlider";
 
 export default function Main() {
   //? States
@@ -20,6 +21,8 @@ export default function Main() {
       <Header />
       {/* Site Main Categories */}
       <ElementsSlider elemItems={mainCategories} />
+      {/* TrendBooks Slider */}
+      <TrendBooksSlider />
     </>
   );
 }

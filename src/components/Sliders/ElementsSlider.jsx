@@ -1,6 +1,4 @@
 import React from "react";
-//? Css
-import "./ElementsSlider.css";
 
 //? Router
 import { NavLink } from "react-router-dom";
