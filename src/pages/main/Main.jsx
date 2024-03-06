@@ -214,7 +214,9 @@ export default function Main() {
   ]);
 
   return (
-    <div>
+    <div className="relative overflow-x-hidden">
+      <div className="size-[200px] md:size-[500px] rounded-full blur-3xl bg-zinc-800 absolute -z-10 top-[-150px] right-[-150px]"></div>
+      <div className="size-[200px] md:size-[500px] rounded-full blur-3xl bg-zinc-800 absolute -z-10 top-[280px] left-10"></div>
       <Header />
       {/* Site Main Categories */}
       <ElementsSlider elemItems={mainCategoriesState} />

@@ -612,16 +612,36 @@ video {
   left: 0px;
 }
 
+.left-10 {
+  left: 2.5rem;
+}
+
 .right-0 {
   right: 0px;
+}
+
+.right-\[-150px\] {
+  right: -150px;
 }
 
 .top-0 {
   top: 0px;
 }
 
+.top-\[-150px\] {
+  top: -150px;
+}
+
+.top-\[280px\] {
+  top: 280px;
+}
+
 .top-\[60px\] {
   top: 60px;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .z-10 {
@@ -692,6 +712,21 @@ video {
   height: 100%;
 }
 
+.size-\[500px\] {
+  width: 500px;
+  height: 500px;
+}
+
+.size-\[\] {
+  width: ;
+  height: ;
+}
+
+.size-\[200px\] {
+  width: 200px;
+  height: 200px;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -702,6 +737,10 @@ video {
 
 .h-\[402px\] {
   height: 402px;
+}
+
+.h-\[500px\] {
+  height: 500px;
 }
 
 .h-\[60px\] {
@@ -744,6 +783,10 @@ video {
   width: 450px;
 }
 
+.w-\[500px\] {
+  width: 500px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -755,6 +798,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[250px\] {
+  width: 250px;
 }
 
 .flex-col {
@@ -809,6 +860,14 @@ video {
   overflow: hidden;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -857,6 +916,11 @@ video {
 
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.bg-zinc-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
 .p-0 {
@@ -953,6 +1017,11 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.blur-3xl {
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all {
@@ -1057,6 +1126,11 @@ video {
     height: 300px;
   }
 
+  .md\:size-\[500px\] {
+    width: 500px;
+    height: 500px;
+  }
+
   .md\:h-\[456px\] {
     height: 456px;
   }
@@ -1079,6 +1153,12 @@ video {
   }
 }
 
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+}
+
 @media (min-width: 1280px) {
   .xl\:inline {
     display: inline;
@@ -1090,5 +1170,25 @@ video {
 
   .xl\:hidden {
     display: none;
+  }
+
+  .xl\:size-\[500px\] {
+    width: 500px;
+    height: 500px;
+  }
+
+  .xl\:h-\[500px\] {
+    height: 500px;
+  }
+
+  .xl\:w-\[500px\] {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:size-\[500px\] {
+    width: 500px;
+    height: 500px;
   }
 }
