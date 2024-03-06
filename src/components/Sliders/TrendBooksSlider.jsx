@@ -10,7 +10,7 @@ export default function TrendBooksSlider() {
   return (
     <div className="py-6">
       <div className="container">
-        <div className="w-full overflow-auto flex items-center gap-8 child:text-white">
+        <div className="w-full overflow-auto pb-4 flex items-center gap-8 child:text-white">
           <div className="flex flex-col bg-[#2a2a2a] px-4 py-3 rounded-lg">
             <div className="size-[300px] rounded-lg overflow-hidden">
               <Link className="size-full">
