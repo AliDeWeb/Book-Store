@@ -4,6 +4,7 @@ import React, { useState, useId } from "react";
 import Header from "../../components/Header/Header";
 import ElementsSlider from "../../components/Sliders/ElementsSlider";
 import TrendBooksSlider from "../../components/Sliders/TrendBooksSlider";
+import ProductsSlider from "../../components/Sliders/ProductsSlider";
 
 export default function Main() {
   //? States
@@ -23,6 +24,10 @@ export default function Main() {
       <ElementsSlider elemItems={mainCategories} />
       {/* TrendBooks Slider */}
       <TrendBooksSlider />
+      {/* Product Sliders */}
+      <ProductsSlider />
+      <ProductsSlider />
+      <ProductsSlider />
     </>
   );
 }
