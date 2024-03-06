@@ -624,6 +624,10 @@ video {
   top: 60px;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -781,6 +785,11 @@ video {
 
 .w-\[280px\] {
   width: 280px;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .flex-col {
@@ -960,6 +969,14 @@ video {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.pt-\[60px\] {
+  padding-top: 60px;
 }
 
 .text-center {

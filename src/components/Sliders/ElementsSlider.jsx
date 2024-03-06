@@ -7,12 +7,12 @@ export default function ElementsSlider(props) {
   return (
     <div className="py-2">
       <div className="container">
-        <div className="w-full overflow-auto m-auto flex items-center justify-start gap-2 md:gap-10 child:child:text-white child:child:py-2 child:child:px-4 child:child:rounded-lg hover:child:child:bg-[#ffffff1f] child:child:transition-all child:child:text-sm child:child:sm:text-base child:child:inline-block">
+        <div className="w-full overflow-auto pb-3 m-auto flex items-center justify-start gap-2 md:gap-10 child:child:text-white child:child:py-2 child:child:px-4 child:child:rounded-lg hover:child:child:bg-[#ffffff1f] child:child:transition-all child:child:text-sm child:child:sm:text-base child:child:inline-block">
           {props.elemItems.map((el) => (
             <div key={el.id}>
               <NavLink
                 className={(status) =>
-                  `${status.isActive && "active-category"}`
+                  `${status.isActive && "active-category"} w-max`
                 }
                 to={el.path}
               >

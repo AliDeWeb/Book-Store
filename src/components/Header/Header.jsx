@@ -45,7 +45,11 @@ export default function Header() {
   const clearSearchBarValue = useCallback(() => setSearchBarValue(""), []);
 
   return (
-    <header className="bg-main-color/50 py-2.5 relative">
+    <header
+      className={`bg-main-color/50 py-2.5 relative ${
+        showSearchBar && "pt-[60px]"
+      }`}
+    >
       <div className="container">
         <div
           className={`flex items-center justify-between ${
@@ -143,7 +147,7 @@ export default function Header() {
         </div>
       </div>
       {showHamburgerMenu && (
-        <div className="bg-[#252525] w-screen h-[calc(100dvh-60px)] absolute top-[60px] right-0 left-0 bottom-0">
+        <div className="bg-[#252525] w-screen h-[calc(100dvh-60px)] z-10 absolute top-[60px] right-0 left-0 bottom-0">
           <div className="container">
             <div className="relative h-[calc(100dvh-80px)]">
               <ul className="child:text-white flex flex-col gap-10 mt-5 max-h-[400px] overflow-auto">
@@ -308,7 +312,7 @@ export default function Header() {
         </div>
       )}
       {showSearchBar && (
-        <div className="w-full h-[60px] bg-black fixed top-0 left-0 right-0">
+        <div className="w-full h-[60px] bg-black z-10 fixed top-0 left-0 right-0">
           <div className="container h-full">
             <div className="flex items-center justify-between h-full px-2">
               <div className="flex items-center h-full gap-2">
