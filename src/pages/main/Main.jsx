@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import ElementsSlider from "../../components/Sliders/ElementsSlider";
 import TrendBooksSlider from "../../components/Sliders/TrendBooksSlider";
 import ProductsSlider from "../../components/Sliders/ProductsSlider";
+import TopRankedBooks from "../../components/TopRankedBooks/TopRankedBooks";
 
 export default function Main() {
   //? States
@@ -222,6 +223,8 @@ export default function Main() {
       <ElementsSlider elemItems={mainCategoriesState} />
       {/* TrendBooks Slider */}
       <TrendBooksSlider trends={trendBooksState} />
+      {/* Top Ranked Books */}
+      <TopRankedBooks />
       {/* Product Sliders */}
       <ProductsSlider
         sectionTitle={`Audio Books`}
