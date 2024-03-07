@@ -93,7 +93,7 @@ export default function Footer() {
                 discover exclusive digital items.
               </p>
             </div>
-            <div className="px-4 lg:w-3/4 flex flex-wrap items-start justify-center gap-10 text-sm font-Inter-Regular child:child:mb-2 hover:child:child:text-red-400 child:child:transition-all">
+            <div className="px-4 lg:w-3/4 flex flex-wrap items-start justify-center gap-10 text-sm font-Inter-Regular child:child:mb-2 hover:child:child:child:text-red-400 child:child:child:transition-all">
               <ul>
                 <li className="footer-title">
                   <Link>Marketplace</Link>
