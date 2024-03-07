@@ -795,6 +795,10 @@ video {
   max-height: 400px;
 }
 
+.max-h-\[\] {
+  max-height: ;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -930,6 +934,10 @@ video {
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .overflow-x-hidden {

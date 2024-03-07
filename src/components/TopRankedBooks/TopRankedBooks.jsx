@@ -17,7 +17,7 @@ export default function TopRankedBooks() {
           <h2 className="text-2xl mb-4">Top Ranked Books</h2>
 
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div className="relative overflow-x-auto shadow-md sm:rounded-lg max-h-[400px] overflow-y-auto">
               <table className="table-fixed w-full">
                 <thead className="sm:text-xl text-base">
                   <tr>
