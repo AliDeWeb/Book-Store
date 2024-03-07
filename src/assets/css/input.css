@@ -7,4 +7,7 @@
     @apply bg-main-color;
     font-family: "Inter-Bold";
   }
+  .footer-title {
+    @apply text-xl font-Inter-Bold mb-6;
+  }
 }

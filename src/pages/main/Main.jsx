@@ -6,6 +6,7 @@ import ElementsSlider from "../../components/Sliders/ElementsSlider";
 import TrendBooksSlider from "../../components/Sliders/TrendBooksSlider";
 import ProductsSlider from "../../components/Sliders/ProductsSlider";
 import TopRankedBooks from "../../components/TopRankedBooks/TopRankedBooks";
+import Footer from "../../components/Footer/Footer";
 
 export default function Main() {
   //? States
@@ -238,6 +239,7 @@ export default function Main() {
         sectionTitle={`Premium Books`}
         productsArr={audioBooksState}
       />
+      <Footer />
     </div>
   );
 }
